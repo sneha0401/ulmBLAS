@@ -7,7 +7,7 @@ FC = gfortran
 CC = gcc-4.8
 #CC = gcc
 
-CFLAGS = -c -DL2SIZE=4194304 -DAdd_ -DF77_INTEGER=int -DStringSunStyle \
+CFLAGS = -c -fPIC -DL2SIZE=4194304 -DAdd_ -DF77_INTEGER=int -DStringSunStyle \
          -DATL_SSE2 -DDREAL
 
 LDFLAGS = -lm

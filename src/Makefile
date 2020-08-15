@@ -27,10 +27,10 @@ $(ATLULMBLAS) : $(ATL_OBJECT_FILES)
 	ranlib $(ATLULMBLAS)
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -fPIC -o $@ $<
 
 atl_%.o : %.c
-	$(CC) $(CFLAGS) -DFAKE_ATLAS -c -o $@ $<
+	$(CC) $(CFLAGS) -DFAKE_ATLAS -c -fPIC -o $@ $<
 
 clean :
 	rm -f $(OBJECT_FILES)
